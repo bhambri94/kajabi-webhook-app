@@ -8,16 +8,8 @@ import (
 )
 
 type Configs struct {
-	CSVName            string `json:"CSVName"`
 	SpreadsheetID      string `json:"SpreadsheetID"`
 	SheetNameWithRange string `json:"SheetNameWithRange"`
-	MSSQLHost          string `json:"MSSQLHost"`
-	DatabaseName       string `json:"DatabaseName"`
-	UserName           string `json:"UserName"`
-	Password           string `json:"Password"`
-	Query              string `json:"Query"`
-	DateColumnName     string `json:"DateColumnName"`
-	OldDataRequired    bool   `json:"OldDataRequired"`
 }
 
 var (

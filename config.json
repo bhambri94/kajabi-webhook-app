@@ -1,12 +1,4 @@
 {
-    "CSVName":"site_33018_contacts_746dda5b-f890-4bc2-9971-eac686ce541b.csv",
-    "SpreadsheetID" : "1REjHPmqsoQuNAadFg5ifmFhJnvC51kJ8e674JbYqsnk",
-    "SheetNameWithRange":"TestCustomerLostDetails2!A2",
-    "MSSQLHost":"localhost",
-    "DatabaseName":"TestDB",
-    "UserName":"sa",
-    "Password":"Test@1234",
-    "Query":"Select * from BI_CustLost_Data_Model",
-    "DateColumnName":"[LostDate]",
-    "OldDataRequired":true
+    "SpreadsheetID" : "1RGCBR-QWWA8NpArlbr4r0Wk7oiXir6rsa6e0m_gmIwY",
+    "SheetNameWithRange":"Contacts!A2"
 }
