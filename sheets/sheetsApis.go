@@ -181,7 +181,7 @@ func BatchAppend(SheetName string, value [][]interface{}) {
 }
 
 func ClearSheet(SheetName string) {
-	readRange := SheetName + "!A1"
+	readRange := SheetName
 	var itt bool
 	if srv == nil {
 		srv = getClient()
@@ -213,7 +213,7 @@ func ClearSheet(SheetName string) {
 
 	} else {
 		fmt.Println("Clearing the sheet's old data and pulling data for new Day")
-		ranges := SheetName + "!A1:CZ1000"
+		ranges := SheetName
 		rb := &sheets.ClearValuesRequest{}
 		_, err := srv.Spreadsheets.Values.Clear(spreadsheetId, ranges, rb).Context(context.Background()).Do()
 		if err != nil {

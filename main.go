@@ -64,8 +64,10 @@ func handleGenerateCSV(ctx *fasthttp.RequestCtx) {
 	sugar.Infof("Final Values being pushed to Google Sheet:=")
 	fmt.Println(finalGoogleSheetValues)
 	SheetName := configs.Configurations.SheetNameWithRange
-	// sheets.ClearSheet(SheetName)
-	sheets.BatchAppend(SheetName, finalGoogleSheetValues)
+	if len(finalGoogleSheetValues) > 1000 {
+		sheets.ClearSheet(SheetName)
+		sheets.BatchWrite(SheetName, finalGoogleSheetValues)
+	}
 	ctx.Response.Header.Set("Content-Type", "application/json")
 	sugar.Infof(string(ctx.Request.Body()))
 }
